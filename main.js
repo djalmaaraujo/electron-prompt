@@ -50,9 +50,9 @@ function createWindow () {
     arg.val = arg.val || ''
     const promptHtml = '<label for="val">' + arg.title + '</label>\
     <input id="val" value="' + arg.val + '" autofocus />\
-    <button onclick="window.close()">Cancel</button>\
     <button onclick="require(\'electron\').ipcRenderer.send(\'prompt-response\', document.getElementById(\'val\').value);window.close()">Ok</button>\
-    <style>button {float:right;} label,input {margin-bottom: 5px; width: 100%; display:block}</style>'
+    <button onclick="window.close()">Cancel</button>\
+    <style>body {font-family: sans-serif;} button {float:right; margin-left: 10px;} label,input {margin-bottom: 10px; width: 100%; display:block;}</style>'
     promptWindow.loadURL('data:text/html,' + promptHtml)
     promptWindow.show()
     promptWindow.on('closed', function() {
