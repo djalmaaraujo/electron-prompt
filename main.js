@@ -57,6 +57,7 @@ function createWindow () {
     promptWindow.show()
     promptWindow.on('closed', function() {
       eventRet.returnValue = promptResponse
+      promptWindow = null
     })
   })
   ipcMain.on('prompt-response', function(event, arg) {
