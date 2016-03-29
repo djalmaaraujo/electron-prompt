@@ -44,7 +44,7 @@ function createWindow () {
       show: false,
       resizable: false,
       movable: false,
-      alwaysOnTop: false,
+      alwaysOnTop: true,
       frame: false
     })
     arg.val = arg.val || ''
